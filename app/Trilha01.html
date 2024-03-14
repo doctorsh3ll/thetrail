@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta content="#345a5a" name="theme-color">
+   <link rel="manifest" href="/manifest.json">
+   <meta name="theme-color" content="#4285f4" />
+   <meta name="apple-mobile-web-app-capable" content="yes">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+   <title>app</title>
+
+   <link rel="stylesheet" defer href="trilha01.css">
+   <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+  </head>
+<body>
+  <header id="s-header">
+    <a class="s-header-nav-btn" href="trilha01\nav.html">
+      <div class="s-header-nav s1-info-p">Iniciar Navegação</div>
+    </a>
+  </header>
+   <swiper-container class="mySwiper" pagination="true" pagination-dynamic-bullets="true">
+      <swiper-slide class="swiper-img"><img id="img-slider-baixa" src="images/foto1.jpg" alt=""></swiper-slide>
+      <swiper-slide class="swiper-img">Slide 2</swiper-slide>
+      <swiper-slide class="swiper-img">Slide 3</swiper-slide>
+      <swiper-slide class="swiper-img">Slide 4</swiper-slide>
+      <swiper-slide class="swiper-img">Slide 5</swiper-slide>
+      <swiper-slide class="swiper-img">Slide 6</swiper-slide>
+      <swiper-slide class="swiper-img">Slide 7</swiper-slide>
+      <swiper-slide class="swiper-img">Slide 8</swiper-slide>
+      <swiper-slide class="swiper-img">Slide 9</swiper-slide>
+    </swiper-container>
+
+<section id="s1-info">
+
+   <div class="info-trilha">
+   
+      <h1 class="s1-info-h1">Trilha do Farol</h1>
+      <P class="s1-info-p">Moderado</P>
+      <p class="s1-info-p">Imbituba, Santa Catarina</p>
+      
+   </div>
+   <a href="">
+   <div class="apoie-trilha">
+
+      <svg xmlns="http://www.w3.org/2000/svg" id="Layer_2" data-name="Layer 2" viewBox="0 0 74.1 74.1">
+         <defs>
+           <style>
+             .cls-1 {
+               fill: none;
+               opacity: .9;
+             }
+       
+             .cls-2 {
+               fill: #f8f8f8;
+             }
+           </style>
+         </defs>
+         <g id="Layer_1-2" data-name="Layer 1">
+           <g class="cls-1">
+             <path class="cls-2" d="m74.1,2.5v51.67c0,1.38-1.12,2.5-2.5,2.5s-2.5-1.12-2.5-2.5V8.54L4.27,73.37c-.49.49-1.13.73-1.77.73s-1.28-.24-1.77-.73c-.97-.97-.97-2.56,0-3.53L65.57,5H17.94c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5,2.5-2.5h53.66c.13,0,.25.01.37.03.13.02.25.04.36.08.32.1.62.26.87.47.05.03.09.07.13.12.16.15.31.33.42.53.06.09.11.19.15.29,0,.03.02.06.03.08.03.06.05.12.06.18.07.23.11.47.11.72Z"/>
+           </g>
+         </g>
+       </svg>
+      <p class="s1-apoie-p">Apoie essa <br> trilha</p>
+    </a>
+
+   </div>
+
+</section>
+
+<div class="dividernone"></div>
+
+<section id="s2-info">
+
+  <div class="s2-b">
+    <p class="s2-b-p1">2,4<span class="s2-b-p3">km</span>
+   <p class="s2-b-p2">Extensão da Trilha</p>
+  </div>
+  <div class="s2-b">
+    <p class="s2-b-p1">144<span class="s2-b-p3">m</span>
+    <p class="s2-b-p2">Ganho de Relevo</p>
+   </div>
+   <div class="s2-b">
+    <p class="s2-b-p1">58<span class="s2-b-p3">min</span>
+    <p class="s2-b-p2">Tempo Médio</p>
+   </div>
+   <div class="s2-b">
+    <p class="s2-b-p1">Circular</p>
+    <p class="s2-b-p2">Tipo de Trilha</p>
+   </div>
+
+</section>
+
+<section id="s2-info2">
+  
+  <div class="texto s2-b-p2">
+    <p>Trilha saindo do canto da Praia da Vila, até o farol. Uma visão linda do mar e ótimas paisagens esverdeadas serão vistas durante essa trilha. <br><br> <span class="texto-adicional">Não se esqueça de levar um chapéu e uma garrafa de água, principalmente na temporada, já que o clima é bem quente e a trilha não oferece muitas sombras.</span></p>
+    <button onclick="mostrarTexto()">Ler mais</button>
+  </div>
+
+</section>
+
+<div class="divider"></div>
+
+<section id="s3-condicoes">
+
+<div class="s3-info">
+  <h1 class="s3-condicoes-h1 s1-info-h1">Condição</h1>
+</div>
+
+
+  <div class="s3-column">
+    <div class="s3-condicao-first-line">
+      <div class="weather-info weather-info-h1 s2-b-p1" id="temperature"></div>
+      <img id="clear-icon" class="weather-icon" src="weather/a_1_sunny.svg" alt="Clear Icon">
+      <img id="rain-icon" class="weather-icon" src="weather/c_1_rainy.svg" alt="Rain Icon">
+      <img id="drizzle-icon" class="weather-icon" src="caminho_para_imagem_drizzle.png" alt="Drizzle Icon">
+      <img id="thunderstorm-icon" class="weather-icon" src="weather/g_1_stormy.svg" alt="Thunderstorm Icon">
+      <img id="snow-icon" class="weather-icon" src="caminho_para_imagem_snow.png" alt="Snow Icon">
+      <img id="clouds-icon" class="weather-icon" src="weather/b_2_cloudy.svg" alt="Clouds Icon">
+    </div>
+    <div class="weather-info s2-b-p2" id="description"></div>
+    <div class="weather-info s2-b-p2" id="max-min"></div>
+    <p class="s1-info-p s3-info-p-weather">Os dados são baseados no clima atual da área da trilha. Nem sempre a previsão é 100%.</p>
+
+  </div>
+
+</section>
+
+<div id="swup" class="overlay transition-overlay"></div>
+
+<script>
+const apiKey = 'f1d52e85ed7eb5bcf6a755eec34afd82'
+const apiWeatherURl = 'https://api.openweathermap.org/data/2.5/weather?q=imbituba&units=metric&lang=pt_br&appid=f1d52e85ed7eb5bcf6a755eec34afd82'
+
+function mostrarTexto() {
+    var textoAdicional = document.querySelector('.texto-adicional');
+    var botaoLerMais = document.querySelector('button');
+
+    if (textoAdicional.style.display === 'none') {
+        textoAdicional.style.display = 'inline';
+        botaoLerMais.textContent = 'Mostrar menos';
+    } else {
+        textoAdicional.style.display = 'none';
+        botaoLerMais.textContent = 'Ler mais';
+    }
+}
+
+        // Substitua 'YOUR_API_KEY' pela sua chave de API do OpenWeather
+        const apiKeyy = 'f1d52e85ed7eb5bcf6a755eec34afd82';
+        const city = 'Imbituba';
+
+        // URL da API do OpenWeather
+        const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKeyy}&units=metric&lang=pt_br`;
+
+        // Função para buscar dados meteorológicos
+        function fetchWeather() {
+            fetch(apiUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Erro ao buscar dados meteorológicos');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // Exibir os dados no HTML
+                    const temperatureString = data.main.temp.toFixed(2).substring(0, 2);
+    document.getElementById('temperature').innerText = `${temperatureString}°`;
+                    document.getElementById('description').innerText = ` ${data.weather[0].description}`;
+                    const maxTemperatureString = data.main.temp_max.toFixed(2).substring(0, 2);
+    // Arredonde a temperatura mínima para duas casas decimais e pegue os dois primeiros caracteres
+                    const minTemperatureString = data.main.temp_min.toFixed(2).substring(0, 2);
+                    document.getElementById('max-min').innerText = `Máx: ${maxTemperatureString}°, Mín: ${minTemperatureString}°`;
+                    document.getElementById('weather-icons').innerHTML = getWeatherIcons(data.weather[0].main);
+                })
+                .catch(error => {
+                    console.error('Erro ao buscar dados meteorológicos:', error);
+                });
+        }
+
+
+        function getWeatherIcons(description) {
+    // Ocultar todos os elementos com a classe 'weather-icon'
+    var weatherIcons = document.getElementsByClassName('weather-icon');
+    Array.from(weatherIcons).forEach(function(icon) {
+        icon.style.display = 'none';
+    });
+
+    switch (description.toLowerCase()) {
+        case 'clear':
+            var clearIcon = document.getElementById('clear-icon');
+            if (clearIcon) {
+                clearIcon.style.display = 'flex';
+            } else {
+                console.error("Elemento 'clear-icon' não encontrado.");
+            }
+            break;
+        case 'clouds':
+            var cloudsIcon = document.getElementById('clouds-icon');
+            if (cloudsIcon) {
+                cloudsIcon.style.display = 'flex';
+            } else {
+                console.error("Elemento 'clouds-icon' não encontrado.");
+            }
+            break;
+        case 'rain':
+            var rainIcon = document.getElementById('rain-icon');
+            if (rainIcon) {
+                rainIcon.style.display = 'flex';
+            } else {
+                console.error("Elemento 'rain-icon' não encontrado.");
+            }
+            break;
+        case 'drizzle':
+            var drizzleIcon = document.getElementById('drizzle-icon');
+            if (drizzleIcon) {
+                drizzleIcon.style.display = 'flex';
+            } else {
+                console.error("Elemento 'drizzle-icon' não encontrado.");
+            }
+            break;
+        case 'thunderstorm':
+            var thunderstormIcon = document.getElementById('thunderstorm-icon');
+            if (thunderstormIcon) {
+                thunderstormIcon.style.display = 'flex';
+            } else {
+                console.error("Elemento 'thunderstorm-icon' não encontrado.");
+            }
+            break;
+        case 'snow':
+            var snowIcon = document.getElementById('snow-icon');
+            if (snowIcon) {
+                snowIcon.style.display = 'block';
+            } else {
+                console.error("Elemento 'snow-icon' não encontrado.");
+            }
+            break;
+        default:
+            console.error("Descrição do tempo não reconhecida:", description);
+            break;
+    }
+}
+
+
+
+
+        // Chamar a função para buscar os dados meteorológicos ao carregar a página
+        fetchWeather();
+
+var imagemBaixaQualidade = document.getElementById('img-slider-baixa');
+var imagemAltaQualidade = document.getElementById('img-slider-alta');
+
+imagemAltaQualidade.addEventListener('load', function() {
+    // Exibe a imagem de alta qualidade e oculta a imagem de baixa qualidade
+    imagemAltaQualidade.style.display = 'block';
+    imagemBaixaQualidade.style.display = 'none';
+});
+
+imagemAltaQualidade.addEventListener('error', function() {
+    console.log('Ocorreu um erro ao carregar a imagem de alta qualidade.');
+});
+
+</script>
+
+</body>
+</html>

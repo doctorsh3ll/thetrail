@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+   <meta name="apple-mobile-web-app-status-bar-style" content="default">
+   <link rel="manifest" href="/manifest.json">
+   <title>App</title>
+
+   <link rel="stylesheet" href="style.css">
+   <script src="script.js"></script>
+</head>
+<body>
+
+   <div id="transition"></div>
+
+   <header id="cabecalho">
+      <div class="ca-panel">
+         <p class="ca-p">TheTrail</p>
+      </div>
+   </header>
+   
+
+   <section id="section-1">
+      <section id="background"></section>
+      <h1 class="s1-h1">Inspire-se</h1>
+      <a id="s1-click" href="Trilha01.html">
+      <div class="s1-panel">
+         <div class="s1-panel-txt">
+
+            <p class="s1-p-nome">Trilha Caminho do Rei</p>
+            <p class="s1-p-km">2,4km</p>
+
+         </div>
+
+         <p class="s1-p-time">58min</p>
+
+      </div>
+   </a>
+   </section>
+
+   <section id="section-2">
+      <section id="background"></section>
+      <h1 class="s2-h1">Noticias</h1>
+      <a href="trilha-farol.html">
+         <div class="s2-panel">
+            <div class="s2-panel-txt">
+   
+               <p class="s2-p-nome">Trilha Caminho do Rei</p>
+               <p class="s2-p-km">2,4km</p>
+   
+            </div>
+   
+            <p class="s2-p-time">58min</p>
+   
+         </div>
+      </a>
+      <a href="trilha-farol.html">
+         <div class="s2-panel">
+            <div class="s2-panel-txt">
+   
+               <p class="s2-p-nome">Trilha Caminho do Rei</p>
+               <p class="s2-p-km">2,4km</p>
+   
+            </div>
+   
+            <p class="s2-p-time">58min</p>
+   
+         </div>
+      </a>
+      <a href="trilha-farol.html">
+         <div class="s2-panel">
+            <div class="s2-panel-txt">
+   
+               <p class="s2-p-nome">Trilha Caminho do Rei</p>
+               <p class="s2-p-km">2,4km</p>
+   
+            </div>
+   
+            <p class="s2-p-time">58min</p>
+   
+         </div>
+      </a>
+   </section>
+
+   <footer id="navbar">
+      <div>
+      <a href="">Mapa
+         
+      </a>
+   </div>
+   <div>
+      <a href="">Home</a>
+   </div>
+   <div>
+      <a href="">Noticias</a>
+   </div>
+   </footer>
+   <div id="overlay-nextpage"></div>
+</body>
+ <script>
+
+// Array contendo os nomes dos dias da semana
+//var diasDaSemana = ["Doming, ", "Segunda-feira, ", "Terça-feira, ", "Quarta-feira, ", "Quinta-feira, ", "Sexta-feira, ", "Sábado, "];
+
+// Array contendo os nomes dos meses
+//var meses = [" de Jan.", " de Fev.", "de Mar.", "de Abr.", "de Maio", "de Jun.", "de Jul.", "de Ago.", "de Set.", "de Out.", "de Nov.", "de Dez."];
+
+// Obter a data atual
+//var dataAtual = new Date();
+
+// Obter o dia da semana, mês e dia atual
+//var diaDaSemanaAtual = diasDaSemana[dataAtual.getDay()];
+//var mesAtual = meses[dataAtual.getMonth()];
+//var diaAtual = dataAtual.getDate();
+
+// Exibir o dia da semana, mês e dia atual dentro das divs correspondentes
+//document.getElementById("diaDaSemana").innerText = diaDaSemanaAtual;
+//document.getElementById("mes").innerText = mesAtual;
+//document.getElementById("dia").innerText = diaAtual;
+
+document.getElementById('s1-click').addEventListener('click', function(event) {
+    event.preventDefault(); // Previne o comportamento padrão do clique no link
+
+    // Aguarda 3 segundos antes de redirecionar
+    var href = this.getAttribute('href');
+    setTimeout(function() {
+        window.location.href = href; // Redireciona após 3 segundos
+    }, 310); // 3000 milissegundos = 3 segundos
+});
+
+document.getElementById('s1-click').addEventListener('click', function(event) {
+    event.preventDefault(); // Previne o comportamento padrão do clique no link
+
+    // Adiciona a classe "animado" para ativar a animação
+    document.getElementById('overlay-nextpage').classList.add('animado');
+
+    // Aguarda 0.4 segundos antes de remover a classe "animado"
+    setTimeout(function() {
+        document.getElementById('overlay-nextpage').classList.remove('animado');
+    }, 410); // 400 milissegundos = 0.4 segundos
+});
+  </script>
+
+</html>
