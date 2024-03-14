@@ -111,6 +111,12 @@ function aparecerPopup() {
 
   popup.classList.add("aparecendo");
   Spopup.classList.add("aparecendo");
+  if ("vibrate" in navigator) {
+    // Vibra por 1000ms (1 segundo)
+    navigator.vibrate(1000);
+  } else {
+    console.log("O navegador não suporta a API de vibração.");
+  }
 }
 
 function clickAccept() {

@@ -25,7 +25,7 @@ async function calculateElevationGain(location1, location2) {
     totalElevationGain += elevationGain;
 
     // Atualizar as informações na página
-    document.getElementById('elevation-gain').textContent = totalElevationGain.toFixed(0);
+    document.getElementById('elevation-gain').textContent = totalElevationGain.toFixed(0) + (' m');
 
     // Retornar o ganho de elevação
     return elevationGain;
