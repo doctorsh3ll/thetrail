@@ -16,6 +16,28 @@ document.addEventListener("DOMContentLoaded", function() {
     let elapsedTime = 0;
     let interval;
 
+    document.getElementById("select-start").addEventListener("change", function() {
+        var startMarkers = document.querySelectorAll(".start-marker");
+        var endMarkers = document.querySelectorAll(".end-marker");
+    
+        if (this.value === "Entrada A") {
+            startMarkers.forEach(function(marker) {
+                marker.style.display = "block";
+            });
+            endMarkers.forEach(function(marker) {
+                marker.style.display = "none";
+            });
+        } else if (this.value === "Entrada B") {
+            startMarkers.forEach(function(marker) {
+                marker.style.display = "none";
+            });
+            endMarkers.forEach(function(marker) {
+                marker.style.display = "block";
+            });
+        }
+    });
+    
+
     function startCronometro() {
         startTime = Date.now() - elapsedTime;
         interval = setInterval(updateCronometro, 1000);
@@ -111,13 +133,9 @@ function aparecerPopup() {
 
   popup.classList.add("aparecendo");
   Spopup.classList.add("aparecendo");
-  if ("vibrate" in navigator) {
-    // Vibra por 1000ms (1 segundo)
     navigator.vibrate(1000);
-  } else {
     console.log("O navegador não suporta a API de vibração.");
   }
-}
 
 function clickAccept() {
     var navItems = document.getElementById('footer-start-container')
