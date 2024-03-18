@@ -21,5 +21,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "dependencies": {
+    "react-router-dom": "^6.22.3"
   }
 }
