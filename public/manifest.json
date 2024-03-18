@@ -6,7 +6,7 @@
   "display": "standalone",
   "orientation": "portrait",
   "scope": "/",
-  "start_url": "/app",
+  "start_url": "auth.thetrailproject.online",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
