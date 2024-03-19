@@ -19,6 +19,18 @@
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
+        // Função para verificar se um token JWT está armazenado no localStorage
+        function checkTokenOnLoad() {
+            const token = localStorage.getItem('token');
+            if (token) {
+                // Se o token existe, obter as informações do usuário
+                getUsername();
+            }
+        }
+
+        // Chamar a função de verificação ao carregar a página
+        checkTokenOnLoad();
+
         async function login() {
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
@@ -29,7 +41,7 @@
                     password: password
                 });
                 const token = response.data.token;
-                // Armazenar o token JWT no local storage
+                // Armazenar o token JWT no localStorage
                 localStorage.setItem('token', token);
                 console.log(response.data.message);
                 document.getElementById('loginForm').style.display = 'none';
@@ -42,26 +54,24 @@
 
         async function getUsername() {
             try {
-                // Obter o token JWT armazenado localmente
                 const token = localStorage.getItem('token');
-
-                // Verificar se o token existe
                 if (!token) {
                     console.error('Token not found');
                     return;
                 }
 
-                // Configurar o cabeçalho com o token JWT
                 const config = {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }
                 };
 
-                // Fazer a solicitação GET com o cabeçalho configurado
                 const response = await axios.get('https://auth.thetrailproject.online/get_username', config);
                 const username = response.data.username;
                 document.getElementById('username').innerText = username;
+                // Exibir as informações do usuário após o login automático
+                document.getElementById('loginForm').style.display = 'none';
+                document.getElementById('userInfo').style.display = 'block';
             } catch (error) {
                 console.error('Error getting username:', error.response.data.message);
             }
@@ -69,7 +79,6 @@
 
         async function logout() {
             try {
-                // Remover o token JWT do local storage ao fazer logout
                 localStorage.removeItem('token');
                 await axios.post('https://auth.thetrailproject.online/logout');
                 document.getElementById('loginForm').style.display = 'block';
