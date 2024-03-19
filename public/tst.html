@@ -28,6 +28,9 @@
                     email: email,
                     password: password
                 });
+                const token = response.data.token;
+                // Armazenar o token JWT no local storage
+                localStorage.setItem('token', token);
                 console.log(response.data.message);
                 document.getElementById('loginForm').style.display = 'none';
                 document.getElementById('userInfo').style.display = 'block';
@@ -38,34 +41,36 @@
         }
 
         async function getUsername() {
-    try {
-        // Obter o token JWT armazenado localmente
-        const token = localStorage.getItem('token');
+            try {
+                // Obter o token JWT armazenado localmente
+                const token = localStorage.getItem('token');
 
-        // Verificar se o token existe
-        if (!token) {
-            console.error('Token not found');
-            return;
-        }
+                // Verificar se o token existe
+                if (!token) {
+                    console.error('Token not found');
+                    return;
+                }
 
-        // Configurar o cabeçalho com o token JWT
-        const config = {
-            headers: {
-                Authorization: `Bearer ${token}`
+                // Configurar o cabeçalho com o token JWT
+                const config = {
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
+                };
+
+                // Fazer a solicitação GET com o cabeçalho configurado
+                const response = await axios.get('https://auth.thetrailproject.online/get_username', config);
+                const username = response.data.username;
+                document.getElementById('username').innerText = username;
+            } catch (error) {
+                console.error('Error getting username:', error.response.data.message);
             }
-        };
-
-        // Fazer a solicitação GET com o cabeçalho configurado
-        const response = await axios.get('https://auth.thetrailproject.online/get_username', config);
-        const username = response.data.username;
-        document.getElementById('username').innerText = username;
-    } catch (error) {
-        console.error('Error getting username:', error.response.data.message);
-    }
-}
+        }
 
         async function logout() {
             try {
+                // Remover o token JWT do local storage ao fazer logout
+                localStorage.removeItem('token');
                 await axios.post('https://auth.thetrailproject.online/logout');
                 document.getElementById('loginForm').style.display = 'block';
                 document.getElementById('userInfo').style.display = 'none';
