@@ -19,16 +19,15 @@
             const token = localStorage.getItem('token');
             if (token) {
                 // Se o token existe, obter as informações do usuário
-                getUsername();
+                getUsername(token);
             }
         }
 
         // Chamar a função de verificação ao carregar a página
         checkTokenOnLoad();
 
-        async function getUsername() {
+        async function getUsername(token) {
             try {
-                const token = localStorage.getItem('token');
                 if (!token) {
                     console.error('Token not found');
                     return;
