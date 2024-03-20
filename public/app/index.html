@@ -99,32 +99,11 @@
    </div>
    </footer>
    <div id="overlay-nextpage"></div>
-</body>
- <script>
-document.getElementById('s1-click').addEventListener('click', function(event) {
-    event.preventDefault(); // Previne o comportamento padrão do clique no link
 
-    // Aguarda 3 segundos antes de redirecionar
-    var href = this.getAttribute('href');
-    setTimeout(function() {
-        window.location.href = href; // Redireciona após 3 segundos
-    }, 310); // 3000 milissegundos = 3 segundos
-});
 
-document.getElementById('s1-click').addEventListener('click', function(event) {
-    event.preventDefault(); // Previne o comportamento padrão do clique no link
 
-    // Adiciona a classe "animado" para ativar a animação
-    document.getElementById('overlay-nextpage').classList.add('animado');
-
-    // Aguarda 0.4 segundos antes de remover a classe "animado"
-    setTimeout(function() {
-        document.getElementById('overlay-nextpage').classList.remove('animado');
-    }, 410); // 400 milissegundos = 0.4 segundos
-});
-  </script>
-
-<script>    // Função para verificar se um token JWT está armazenado no localStorage
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
    function checkTokenOnLoad() {
        const token = localStorage.getItem('token');
        if (token) {
@@ -153,7 +132,32 @@ document.getElementById('s1-click').addEventListener('click', function(event) {
            console.error('Error getting username:', error.response.data.message);
        }
    }
+
+
+document.getElementById('s1-click').addEventListener('click', function(event) {
+    event.preventDefault(); // Previne o comportamento padrão do clique no link
+
+    // Aguarda 3 segundos antes de redirecionar
+    var href = this.getAttribute('href');
+    setTimeout(function() {
+        window.location.href = href; // Redireciona após 3 segundos
+    }, 310); // 3000 milissegundos = 3 segundos
+});
+
+document.getElementById('s1-click').addEventListener('click', function(event) {
+    event.preventDefault(); // Previne o comportamento padrão do clique no link
+
+    // Adiciona a classe "animado" para ativar a animação
+    document.getElementById('overlay-nextpage').classList.add('animado');
+
+    // Aguarda 0.4 segundos antes de remover a classe "animado"
+    setTimeout(function() {
+        document.getElementById('overlay-nextpage').classList.remove('animado');
+    }, 410); // 400 milissegundos = 0.4 segundos
+});
 </script>
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+</body>
 
 </html>
