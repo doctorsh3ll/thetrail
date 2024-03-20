@@ -101,26 +101,6 @@
    <div id="overlay-nextpage"></div>
 </body>
  <script>
-
-// Array contendo os nomes dos dias da semana
-//var diasDaSemana = ["Doming, ", "Segunda-feira, ", "Terça-feira, ", "Quarta-feira, ", "Quinta-feira, ", "Sexta-feira, ", "Sábado, "];
-
-// Array contendo os nomes dos meses
-//var meses = [" de Jan.", " de Fev.", "de Mar.", "de Abr.", "de Maio", "de Jun.", "de Jul.", "de Ago.", "de Set.", "de Out.", "de Nov.", "de Dez."];
-
-// Obter a data atual
-//var dataAtual = new Date();
-
-// Obter o dia da semana, mês e dia atual
-//var diaDaSemanaAtual = diasDaSemana[dataAtual.getDay()];
-//var mesAtual = meses[dataAtual.getMonth()];
-//var diaAtual = dataAtual.getDate();
-
-// Exibir o dia da semana, mês e dia atual dentro das divs correspondentes
-//document.getElementById("diaDaSemana").innerText = diaDaSemanaAtual;
-//document.getElementById("mes").innerText = mesAtual;
-//document.getElementById("dia").innerText = diaAtual;
-
 document.getElementById('s1-click').addEventListener('click', function(event) {
     event.preventDefault(); // Previne o comportamento padrão do clique no link
 
@@ -145,5 +125,6 @@ document.getElementById('s1-click').addEventListener('click', function(event) {
   </script>
 
   <script src="getUser.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 </html>

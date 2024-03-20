@@ -1,4 +1,3 @@
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     // Função para verificar se um token JWT está armazenado no localStorage
     function checkTokenOnLoad() {
         const token = localStorage.getItem('token');
