@@ -3,6 +3,7 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+   <meta id="mymeta" content="#2BBF3A" name="theme-color">
    <meta name="apple-mobile-web-app-status-bar-style" content="default">
    <link rel="manifest" href="/manifest.json">
    <title>App</title>
@@ -16,7 +17,8 @@
 
    <header id="cabecalho">
       <div class="ca-panel">
-         <p class="ca-p">TheTrail</p>
+         <div class="ca-img"></div>
+         <p class="ca-p">Olá, <span id="username"></span>!</p>
       </div>
    </header>
    
@@ -141,5 +143,7 @@ document.getElementById('s1-click').addEventListener('click', function(event) {
     }, 410); // 400 milissegundos = 0.4 segundos
 });
   </script>
+
+  <script src="getUser.js"></script>
 
 </html>
